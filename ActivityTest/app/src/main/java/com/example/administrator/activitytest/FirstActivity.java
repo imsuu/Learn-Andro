@@ -32,6 +32,18 @@ public class FirstActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode){
+            case 1:
+                if (resultCode==RESULT_OK){
+                    String returnedData=data.getStringExtra("data_return");
+                    Toast.makeText(FirstActivity.this,returnedData,Toast.LENGTH_SHORT).show();
+                }
+                break;
+            default:
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +57,14 @@ public class FirstActivity extends AppCompatActivity {
 //                Intent intent=new Intent("com.example.administrator.activitytest.ACTION_START");
 //                intent.addCategory("com.example.administrator.activitytest.MY_CATEGORY");
 //                startActivity(intent);
-                String data="Hello SecondActivity";
+
+//                String data="Hello SecondActivity";
+//                Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
+//                intent.putExtra("extra_data",data);
+//                startActivity(intent);
+
                 Intent intent=new Intent(FirstActivity.this,SecondActivity.class);
-                intent.putExtra("extra_data",data);
-                startActivity(intent);
+                startActivityForResult(intent,1);
             }
         });
         Button button1_1=(Button)findViewById(R.id.button_1_1);

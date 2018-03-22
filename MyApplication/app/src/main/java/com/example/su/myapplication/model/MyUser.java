@@ -1,4 +1,4 @@
-package com.example.su.myapplication.adapter;
+package com.example.su.myapplication.model;
 
 import cn.bmob.v3.BmobUser;
 

@@ -12,10 +12,9 @@ import com.example.su.myapplication.model.MyUser;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
-    private CircleImageView headView;
+
     private EditText nickName;
     private EditText loginEmail;
     private EditText password;
@@ -30,7 +29,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 // findView
-        headView = (CircleImageView) findViewById(R.id.img_2);
         nickName = (EditText) findViewById(R.id.nickName);
         loginEmail = (EditText) findViewById(R.id.loginEmail);
         password = (EditText) findViewById(R.id.password);

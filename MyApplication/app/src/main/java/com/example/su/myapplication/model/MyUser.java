@@ -9,12 +9,13 @@ import cn.bmob.v3.datatype.BmobFile;
 
 public class MyUser extends BmobUser {
     //头像
-    BmobFile Photo;
-    public BmobFile getPhoto() {
-        return Photo;
+    private BmobFile headPortrait;
+
+    public BmobFile getHeadPortrait() {
+        return headPortrait;
     }
 
-    public void setPhoto(BmobFile photo) {
-        Photo = photo;
+    public void setheadPortrait(BmobFile headPortrait) {
+        this.headPortrait = headPortrait;
     }
 }

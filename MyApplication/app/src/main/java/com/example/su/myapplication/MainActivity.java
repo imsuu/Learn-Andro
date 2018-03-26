@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Bmob.initialize(this, "your app id");
+        Bmob.initialize(this, "bb54bce7bd52e042e7de4ce0df7d1ecb");
         setContentView(R.layout.activity_main);
 
         Button btnLogin = (Button)findViewById(R.id.btn_login);
